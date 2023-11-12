@@ -1,15 +1,15 @@
 ---
-import { getCurrentTimeInItaly, formatTimeForItaly } from "../lib/helpers";
+import { getCurrentTimeInJakarta, formatTimeForJakarta } from "../lib/helpers";
 import Card from "./Card/index.astro";
 ---
 
 <script>
-  import { formatTimeForItaly } from "../lib/helpers";
+  import { formatTimeForJakarta } from "../lib/helpers";
 
   function updateClock() {
     const timeDisplay = document.getElementById("timeDisplay");
     if (timeDisplay) {
-      timeDisplay.textContent = formatTimeForItaly(new Date());
+      timeDisplay.textContent = formatTimeForJakarta(new Date());
     }
   }
 
@@ -21,6 +21,6 @@ import Card from "./Card/index.astro";
     id="timeDisplay"
     class="text-5xl w-full h-[calc(100%-28px)] font-serif flex justify-center items-center"
   >
-    {formatTimeForItaly(getCurrentTimeInItaly())}
+    {formatTimeForJakarta(getCurrentTimeInJakarta())}
   </h4>
 </Card>
